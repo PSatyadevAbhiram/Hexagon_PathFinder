@@ -1,144 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Path Highlighter</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
-        }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Path Highlighter</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-top: 50px;
+			}
 
-        .hexagon {
-            position: relative;
-            width: 300px;
-            height: 260px;
-        }
+			.hexagon {
+				position: relative;
+				width: 300px;
+				height: 260px;
+			}
 
-        .hexagon div {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: gray;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 20px;
-            color: white;
-            font-weight: bold;
-        }
+			.hexagon div {
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				background-color: gray;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 20px;
+				color: white;
+				font-weight: bold;
+			}
 
-        .hexagon div.A {
-            top: 0;
-            left: 140px;
-        }
-        .hexagon div.B {
-            top: 60px;
-            left: 0;
-        }
-        .hexagon div.C {
-            top: 200px;
-            left: 0;
-        }
-        .hexagon div.D {
-            top: 260px;
-            left: 140px;
-        }
-        .hexagon div.E {
-            top: 200px;
-            left: 280px;
-        }
-        .hexagon div.F {
-            top: 60px;
-            left: 280px;
-        }
+			.hexagon div.A {
+				top: 0;
+				left: 140px;
+			}
+			.hexagon div.B {
+				top: 60px;
+				left: 0;
+			}
+			.hexagon div.C {
+				top: 200px;
+				left: 0;
+			}
+			.hexagon div.D {
+				top: 250px;
+				left: 140px;
+			}
+			.hexagon div.E {
+				top: 200px;
+				left: 280px;
+			}
+			.hexagon div.F {
+				top: 60px;
+				left: 280px;
+			}
 
-        .line {
-            stroke: gray;
-            stroke-width: 2;
-        }
+			.line {
+				stroke: gray;
+				stroke-width: 2;
+			}
 
-        .highlight {
-            stroke: yellow;
-            stroke-width: 4;
-        }
-    </style>
-</head>
-<body>
-    <h1>Path Highlighter</h1>
-    <div class="hexagon">
-        <div class="A">A</div>
-        <div class="B">B</div>
-        <div class="C">C</div>
-        <div class="D">D</div>
-        <div class="E">E</div>
-        <div class="F">F</div>
-        <svg width="300" height="260">
-            <line x1="150" y1="10" x2="10" y2="70" class="line" id="A-B" />
-            <line x1="10" y1="70" x2="10" y2="210" class="line" id="B-C" />
-            <line x1="10" y1="210" x2="150" y2="270" class="line" id="C-D" />
-            <line x1="150" y1="270" x2="290" y2="210" class="line" id="D-E" />
-            <line x1="290" y1="210" x2="290" y2="70" class="line" id="E-F" />
-            <line x1="290" y1="70" x2="150" y2="10" class="line" id="F-A" />
-            <line x1="150" y1="10" x2="150" y2="270" class="line" id="A-D" />
-            <line x1="10" y1="70" x2="290" y2="210" class="line" id="B-E" />
-            <line x1="10" y1="210" x2="290" y2="70" class="line" id="C-F" />
-            <line x1="150" y1="10" x2="290" y2="210" class="line" id="A-E" />
-        </svg>
-    </div>
+			.highlight {
+				stroke: yellow;
+				stroke-width: 4;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Path Highlighter</h1>
+		<div class="hexagon">
+			<div class="A">A</div>
+			<div class="B">B</div>
+			<div class="C">C</div>
+			<div class="D">D</div>
+			<div class="E">E</div>
+			<div class="F">F</div>
+			<svg width="300" height="260">
+				<line x1="150" y1="10" x2="10" y2="70" class="line" id="A-B" />
+				<line x1="10" y1="70" x2="10" y2="210" class="line" id="B-C" />
+				<line
+					x1="10"
+					y1="210"
+					x2="150"
+					y2="265"
+					class="line"
+					id="C-D" />
+				<line
+					x1="150"
+					y1="265"
+					x2="290"
+					y2="210"
+					class="line"
+					id="D-E" />
+				<line
+					x1="290"
+					y1="210"
+					x2="290"
+					y2="70"
+					class="line"
+					id="E-F" />
+				<line x1="290" y1="70" x2="150" y2="10" class="line" id="F-A" />
+				<line
+					x1="150"
+					y1="10"
+					x2="150"
+					y2="270"
+					class="line"
+					id="A-D" />
+				<line x1="10" y1="70" x2="290" y2="210" class="line" id="B-E" />
+				<line x1="10" y1="210" x2="290" y2="70" class="line" id="C-F" />
+				<line
+					x1="150"
+					y1="10"
+					x2="290"
+					y2="210"
+					class="line"
+					id="A-E" />
+			</svg>
+		</div>
 
-    <div style="margin-top: 3vw">
-        <label for="pathSelect">Select Path:</label>
-        <select id="pathSelect">
-            <option value="">Select Path</option>
-            <option value="A-B">A -> B</option>
-            <option value="A-C">A -> C</option>
-            <option value="A-D">A -> D</option>
-            <option value="A-E">A -> E</option>
-            <option value="A-F">A -> F</option>
-            <option value="B-A">B -> A</option>
-            <option value="B-C">B -> C</option>
-            <option value="B-D">B -> D</option>
-            <option value="B-E">B -> E</option>
-            <option value="B-F">B -> F</option>
-            <option value="C-A">C -> A</option>
-            <option value="C-B">C -> B</option>
-            <option value="C-D">C -> D</option>
-            <option value="C-E">C -> E</option>
-            <option value="C-F">C -> F</option>
-            <option value="D-A">D -> A</option>
-            <option value="D-B">D -> B</option>
-            <option value="D-C">D -> C</option>
-            <option value="D-E">D -> E</option>
-            <option value="D-F">D -> F</option>
-            <option value="E-A">E -> A</option>
-            <option value="E-B">E -> B</option>
-            <option value="E-C">E -> C</option>
-            <option value="E-D">E -> D</option>
-            <option value="E-F">E -> F</option>
-            <option value="F-A">F -> A</option>
-            <option value="F-B">F -> B</option>
-            <option value="F-C">F -> C</option>
-            <option value="F-D">F -> D</option>
-            <option value="F-E">F -> E</option>
-        </select>
-    </div>
+		<div style="margin-top: 3vw">
+			<label for="pathSelect">Select Path:</label>
+			<select id="pathSelect">
+				<option value="">Select Path</option>
+				<option value="A-B">A -> B</option>
+				<option value="A-D">A -> D</option>
+				<option value="A-E">A -> E</option>
+				<option value="B-C">B -> C</option>
+				<option value="B-E">B -> E</option>
+				<option value="C-D">C -> D</option>
+				<option value="C-F">C -> F</option>
+				<option value="D-E">D -> E</option>
+				<option value="E-F">E -> F</option>
+				<option value="F-A">F -> A</option>
+			</select>
+		</div>
 
-    <script>
-        document.getElementById('pathSelect').addEventListener('change', function () {
-            const selectedPath = this.value;
-            const lines = document.querySelectorAll('.line');
-            
-            lines.forEach(line => {
-                line.classList.remove('highlight');
-                if (line.id === selectedPath) {
-                    line.classList.add('highlight');
-                }
-            });
-        });
-    </script>
-</body>
+		<script>
+			document
+				.getElementById('pathSelect')
+				.addEventListener('change', function () {
+					const selectedPath = this.value;
+					const lines = document.querySelectorAll('.line');
+					lines.forEach((line) => {
+						line.classList.remove('highlight');
+						console.log(line);
+						if (line.id === selectedPath) {
+							line.classList.add('highlight');
+						}
+					});
+				});
+		</script>
+	</body>
 </html>
